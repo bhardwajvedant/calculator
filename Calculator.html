@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+
+        <link rel="stylesheet" href="Calculator.css">
+    </head>
+    <div id="outer">
+        <h1 style="margin-top: 5px;text-shadow: 1px 1px 10px rgba(235, 110, 9, 0.664);">Calculator</h1>
+<div id="container">
+<input type="text" id="ib">
+<br>
+<button onclick="a(this)" style="background-color:yellow;">*</button>
+<button onclick="a(this)" style="background-color:yellow;">/</button>
+<button onclick="a(this)" style="background-color:yellow;">-</button>
+<button onclick="a(this)" style="background-color:yellow;">+</button>
+<br>
+<button onclick="a(this)" style="background-color:yellow;">.</button>
+<button onclick="a(this)">9</button>
+<button onclick="a(this)">8</button>
+<button onclick="a(this)">7</button>
+
+<br>
+<button onclick="a(this)">6</button>
+<button onclick="a(this)">5</button>
+<button onclick="a(this)">4</button>
+<button onclick="a(this)">3</button>
+<br>
+<button onclick="a(this)">2</button>
+<button onclick="a(this)">1</button>
+<button onclick="a(this)">0</button>
+<button onclick="answer()" style="background-color: green;">=</button>
+<br>
+<button onclick="clearr()" id="clea">Clear</button>
+</div>
+</div>
+
+
+
+ 
+
+    <script type="text/javascript">
+function a(element)
+{
+    var inp=document.getElementById("ib");
+    var ele=element.innerText;
+    inp.value+=ele;
+    
+}
+function answer()
+{
+    var inp=document.getElementById("ib").value;
+    var resu=eval(inp);
+    document.getElementById("ib").value=resu;
+}
+
+function clearr()
+{
+    document.getElementById("ib").value="";
+}
+
+    </script>
+</html>
